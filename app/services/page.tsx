@@ -8,11 +8,12 @@ export default function ServicesPage() {
     return (
         <div className="flex flex-col">
             {/* Hero */}
-            <section className="bg-primary text-white py-20 text-center">
-                <div className="container mx-auto px-4">
-                    <h1 className="text-4xl font-bold mb-4">サービス内容・料金</h1>
-                    <p className="text-xl">
-                        企業のフェーズやニーズに合わせた3つの紹介形態をご用意しています
+            <section className="bg-primary text-white py-20 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-primary to-primary opacity-80" />
+                <div className="container mx-auto px-4 relative z-10">
+                    <h1 className="text-4xl font-bold mb-4 tracking-wider">サービス内容・料金</h1>
+                    <p className="text-xl text-gray-300 font-light">
+                        企業のフェーズやニーズに合わせた<br className="md:hidden" />3つの紹介形態をご用意しています
                     </p>
                 </div>
             </section>
@@ -41,12 +42,12 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Plan 2 */}
-                    <div className="border-2 border-secondary rounded-2xl p-8 hover:shadow-xl transition-shadow transform md:-translate-y-4 bg-white relative flex flex-col">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary text-white px-4 py-1 rounded-full text-sm font-bold">
-                            人気
+                    <div className="border border-secondary/30 rounded-2xl p-8 hover:shadow-2xl transition-all transform md:-translate-y-4 bg-white relative flex flex-col shadow-lg">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold-gradient text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md tracking-wider">
+                            RECOMMENDED
                         </div>
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center text-secondary">
+                            <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
                                 <UserCheck size={24} />
                             </div>
                             <h3 className="text-2xl font-bold">社外役員</h3>
@@ -58,7 +59,7 @@ export default function ServicesPage() {
                             月額 30-80<span className="text-lg font-normal">万円〜</span>
                         </div>
                         <div className="mb-8 text-sm text-gray-500">※責任範囲により変動</div>
-                        <Button href="/contact" variant="primary" className="w-full text-center justify-center">
+                        <Button href="/contact" variant="gold" className="w-full text-center justify-center">
                             詳細を見る
                         </Button>
                     </div>

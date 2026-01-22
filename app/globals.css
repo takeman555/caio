@@ -1,28 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  /* Design System Colors */
-  --primary: #1E3A5F;
-  --secondary: #C9A227;
-  --background: #F5F7FA;
-  --text: #2D3748;
+  /* Premium Design System Colors */
+  --primary: #0F172A;
+  /* Midnight Navy */
+  --secondary: #BFA15F;
+  /* Champagne Gold */
+  --text: #1A202C;
+  /* Charcoal */
+  --background: #F8F9FA;
+  /* Porcelain White */
   --white: #FFFFFF;
-  --success: #38A169;
+  --success: #2F855A;
 }
 
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-background: var(--background);
   --color-text: var(--text);
+  --color-background: var(--background);
   --color-white: var(--white);
   --color-success: var(--success);
-  
+
   --font-sans: var(--font-noto-sans-jp), sans-serif;
+  --font-serif: var(--font-noto-serif-jp), serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
   font-family: var(--font-sans);
+  font-feature-settings: "palt";
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+}
+
+/* Gold Gradient Utilities */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #CFB87C 0%, #BFA15F 50%, #A68B45 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #CFB87C 0%, #BFA15F 50%, #A68B45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

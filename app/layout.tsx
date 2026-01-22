@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+});
+
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif-jp",
+  subsets: ["latin"],
+  weight: ["400", "600"],
 });
 
 import Header from "@/components/Header";
@@ -24,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} antialiased bg-background text-text font-sans flex flex-col min-h-screen`}
+        className={`${notoSansJP.variable} ${notoSerifJP.variable} antialiased bg-background text-text font-sans flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-grow pt-20">
